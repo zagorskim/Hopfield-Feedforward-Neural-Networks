@@ -7,7 +7,6 @@
           <value>
             <JupyterConnectionParameters>
               <option name="managed" value="true" />
-              <option name="sdkHomePath" value="D:\PW\Wstęp do Sztucznej Inteligencji\Projekt\Implementacja\Repo\Scripts\python.exe" />
             </JupyterConnectionParameters>
           </value>
         </entry>

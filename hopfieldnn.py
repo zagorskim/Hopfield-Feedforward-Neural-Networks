@@ -22,7 +22,7 @@ def choose_representative_samples(x, y, class_n):
     return train_unique, classes
 
 
-def hopfield_train(classes, train, x_test, y_test):
+def hopfield_train(classes, train, x_test, y_test, preview_indexes):
     # use pandas here
     for i in range(len(classes)):
         train[i] = convert_binary(train[i])
@@ -49,8 +49,8 @@ def hopfield_train(classes, train, x_test, y_test):
     fig, axs = plt.subplots(2, n_examples, figsize=(10, 4))
     indices = np.random.choice(x_test.shape[0], n_examples)
     for i in range(n_examples):
-        axs[0, i].imshow(x_test[indices[i]].reshape(28, 28), cmap='gray')
-        axs[1, i].imshow(pred[indices[i]].reshape((28, 28)), cmap='gray')
+        axs[0, i].imshow(x_test[preview_indexes[i]].reshape(28, 28), cmap='gray')
+        axs[1, i].imshow(pred[preview_indexes[i]].reshape((28, 28)), cmap='gray')
     plt.show()
 
     return accuracy
